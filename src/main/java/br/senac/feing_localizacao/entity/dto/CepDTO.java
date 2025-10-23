@@ -15,6 +15,26 @@ public class CepDTO {
   private String ddd;
   private String siafi;
 
+  public CepDTO(String cep, String logradouro,
+                String complementeo, String unidade,
+                String bairro, String localidade,
+                String uf, String estado, String regiao,
+                String ibge, String gia, String ddd, String siafi) {
+    this.cep = cep;
+    this.logradouro = logradouro;
+    this.complementeo = complementeo;
+    this.unidade = unidade;
+    this.bairro = bairro;
+    this.localidade = localidade;
+    this.uf = uf;
+    this.estado = estado;
+    this.regiao = regiao;
+    this.ibge = ibge;
+    this.gia = gia;
+    this.ddd = ddd;
+    this.siafi = siafi;
+  }
+
   public String getCep() {
     return cep;
   }

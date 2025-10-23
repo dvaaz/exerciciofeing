@@ -15,9 +15,10 @@ public class CepController {
   @Autowired
   CepFeignClient feignClient;
 
-  @GetMapping()
+  @GetMapping("/cep/{cep}")
   @CrossOrigin(origins="*")
-  public ResponseEntity<CepDTO> buscarCep(){
-    return ResponseEntity.ok()
+  public ResponseEntity<CepDTO> buscarCep(Integer cep){
+
+    return ResponseEntity.ok(feignClient.getCep(cep));
   }
 }
